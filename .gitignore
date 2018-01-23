@@ -2,3 +2,5 @@
 *~
 *.pyc
 *.tok
+__pycache__
+.cache
