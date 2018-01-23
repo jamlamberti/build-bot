@@ -7,6 +7,7 @@ class NotificationFailed(Exception):
 
 class Notifier():
     __metaclass__ = abc.ABCMeta
+
     def __init__(self):
         # TODO: set up logging
         pass

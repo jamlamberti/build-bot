@@ -1,0 +1,2 @@
+import notifications
+print notifications.NOTIFIERS

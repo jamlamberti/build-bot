@@ -1,7 +1,8 @@
 import requests
 import json
 from common import config
-from plugin_types.notifier import Notifier
+from plugin_types.notifier import Notifier, NotificationFailed
+
 
 class Slack(Notifier):
     def __init__(self):
@@ -16,4 +17,4 @@ class Slack(Notifier):
         if req.status_code != 200:
             exp_msg = 'Got a response of %d when connecting to %s' % (
                 req.status_code, self.slack_config.get('incoming-url'))
-            raise notifier.NotificationFailed(exp_msg)
+            raise NotificationFailed(exp_msg)
